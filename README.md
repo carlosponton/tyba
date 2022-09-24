@@ -49,13 +49,12 @@ docker-compose up
   curl --location --request GET 'http://localhost:3000/api/v1/restaurant/nearvy?latitude=-33.8670522&longitude=151.1957362' --header 'Authorization: Bearer token'
   ```
   
- * Invoke the `/auth/login` endpoint 
+* Invoke the `/auth/login` endpoint 
   ```shell
   curl --location --request POST 'http://localhost:3000/api/v1/auth/login' --header 'Content-Type: application/json' --data-raw '{
     "username": "ponton",
     "password": "123456"
-}'
-  ```
+}'```
   
 * Invoke the `/auth/signup` endpoint 
   ```shell
