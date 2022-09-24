@@ -54,14 +54,15 @@ docker-compose up
   curl --location --request POST 'http://localhost:3000/api/v1/auth/login' --header 'Content-Type: application/json' --data-raw '{
     "username": "ponton",
     "password": "123456"
-}'```
+    }'
+  ```
   
 * Invoke the `/auth/signup` endpoint 
   ```shell
-curl --location --request POST 'http://localhost:3000/api/v1/auth/signup' --header 'Content-Type: application/json' --data-raw '{
+  curl --location --request POST 'http://localhost:3000/api/v1/auth/signup' --header 'Content-Type: application/json' --data-raw '{
     "username": "ponton",
     "password": "123456"
-}'
+  }'
   ```
   
 ## Run It
