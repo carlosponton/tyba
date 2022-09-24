@@ -2,6 +2,24 @@
 
 Test para tyba
 
+## Env
+```shell
+APP_ID=tyba
+PORT=3000
+LOG_LEVEL=debug
+REQUEST_LIMIT=100kb
+SESSION_SECRET=
+TOKEN_SECRET=
+GOOGLE_KEY=
+
+# Database
+MONGO_USERNAME=
+MONGO_PASSWORD=
+MONGO_HOSTNAME=
+MONGO_PORT=
+MONGO_DB=
+```
+
 ## Get Started
 
 
