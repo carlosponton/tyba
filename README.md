@@ -30,6 +30,47 @@ Install all package dependencies (one time operation)
 npm install
 ```
 
+#### Run in docker:
+
+Compiles the application and starts it in production production mode.
+
+```shell
+docker-compose up
+```
+
+## Try It
+* Open your browser to [http://localhost:3000](http://localhost:3000)
+* Invoke the `/restuarant/history` endpoint 
+  ```shell
+  curl --location --request GET 'http://localhost:3000/api/v1/restaurant/history' \
+--header 'Authorization: Bearer token'
+  ```
+* Invoke the `/restuarant/nearvy` endpoint 
+  ```shell
+  curl --location --request GET 'http://localhost:3000/api/v1/restaurant/nearvy?latitude=-33.8670522&longitude=151.1957362' \
+--header 'Authorization: Bearer token'
+  ```
+  
+ * Invoke the `/auth/login` endpoint 
+  ```shell
+  curl --location --request POST 'http://localhost:3000/api/v1/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "ponton",
+    "password": "123456"
+}'
+  ```
+  
+* Invoke the `/auth/signup` endpoint 
+  ```shell
+curl --location --request POST 'http://localhost:3000/api/v1/auth/signup' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "ponton",
+    "password": "123456"
+}'
+  ```
+  
 ## Run It
 #### Run in *development* mode:
 Runs the application is development mode. Should not be used in production
@@ -67,13 +108,6 @@ or debug them
 npm run test:debug
 ```
 
-## Try It
-* Open your browser to [http://localhost:3000](http://localhost:3000)
-* Invoke the `/examples` endpoint 
-  ```shell
-  curl http://localhost:3000/api/v1/examples
-  ```
-
 
 ## Debug It
 
@@ -102,14 +136,5 @@ Fix all prettier linter errors
 ```
 npm run lint
 ```
-
-## Deploy It
-
-Deploy to CloudFoundry
-
-```shell
-docker-compose up
-```
-
 
    
